@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83412A0D1455007077B8 /* CameraRepresentable.swift */; };
+		850E83442A0D15F4007077B8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83432A0D15F4007077B8 /* CameraView.swift */; };
+		850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83452A0D347A007077B8 /* ImagePredictor.swift */; };
 		858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */; };
 		858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F1A2A0BC1E5002746D1 /* ContentView.swift */; };
 		858D8F1D2A0BC1E6002746D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858D8F1C2A0BC1E6002746D1 /* Assets.xcassets */; };
@@ -14,6 +17,13 @@
 		858D8F2A2A0BC1E6002746D1 /* FlowerDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F292A0BC1E6002746D1 /* FlowerDetectorTests.swift */; };
 		858D8F342A0BC1E7002746D1 /* FlowerDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F332A0BC1E7002746D1 /* FlowerDetectorUITests.swift */; };
 		858D8F362A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F352A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift */; };
+		858D8F432A0BC234002746D1 /* FlowerDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F422A0BC234002746D1 /* FlowerDetector.mlmodel */; };
+		85C2D5752A0D878500CA8B41 /* FlowerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C2D5742A0D878500CA8B41 /* FlowerType.swift */; };
+		85D9D9342A0C652600E4C817 /* TabManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9332A0C652600E4C817 /* TabManagerView.swift */; };
+		85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9352A0C691100E4C817 /* HomeView.swift */; };
+		85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9372A0C717D00E4C817 /* IdentifierView.swift */; };
+		85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9392A0C835100E4C817 /* CameraModel.swift */; };
+		85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		850E83412A0D1455007077B8 /* CameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepresentable.swift; sourceTree = "<group>"; };
+		850E83432A0D15F4007077B8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		850E83452A0D347A007077B8 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		858D8F152A0BC1E5002746D1 /* FlowerDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetectorApp.swift; sourceTree = "<group>"; };
 		858D8F1A2A0BC1E5002746D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +57,13 @@
 		858D8F2F2A0BC1E6002746D1 /* FlowerDetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowerDetectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		858D8F332A0BC1E7002746D1 /* FlowerDetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetectorUITests.swift; sourceTree = "<group>"; };
 		858D8F352A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetectorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		858D8F422A0BC234002746D1 /* FlowerDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FlowerDetector.mlmodel; path = ../../../Projects/FlowerDetector.mlmodel; sourceTree = "<group>"; };
+		85C2D5742A0D878500CA8B41 /* FlowerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerType.swift; sourceTree = "<group>"; };
+		85D9D9332A0C652600E4C817 /* TabManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerView.swift; sourceTree = "<group>"; };
+		85D9D9352A0C691100E4C817 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		85D9D9372A0C717D00E4C817 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
+		85D9D9392A0C835100E4C817 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +114,10 @@
 		858D8F172A0BC1E5002746D1 /* FlowerDetector */ = {
 			isa = PBXGroup;
 			children = (
+				85C2D5732A0D873A00CA8B41 /* ViewModels */,
+				85C2D5722A0D873400CA8B41 /* Models */,
+				85D9D9322A0C651800E4C817 /* Views */,
+				858D8F422A0BC234002746D1 /* FlowerDetector.mlmodel */,
 				858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */,
 				858D8F1A2A0BC1E5002746D1 /* ContentView.swift */,
 				858D8F1C2A0BC1E6002746D1 /* Assets.xcassets */,
@@ -125,6 +149,36 @@
 				858D8F352A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift */,
 			);
 			path = FlowerDetectorUITests;
+			sourceTree = "<group>";
+		};
+		85C2D5722A0D873400CA8B41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85C2D5742A0D878500CA8B41 /* FlowerType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85C2D5732A0D873A00CA8B41 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		85D9D9322A0C651800E4C817 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85D9D9332A0C652600E4C817 /* TabManagerView.swift */,
+				85D9D9352A0C691100E4C817 /* HomeView.swift */,
+				85D9D9372A0C717D00E4C817 /* IdentifierView.swift */,
+				85D9D9392A0C835100E4C817 /* CameraModel.swift */,
+				85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */,
+				850E83412A0D1455007077B8 /* CameraRepresentable.swift */,
+				850E83432A0D15F4007077B8 /* CameraView.swift */,
+				850E83452A0D347A007077B8 /* ImagePredictor.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +311,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C2D5752A0D878500CA8B41 /* FlowerType.swift in Sources */,
+				85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */,
+				85D9D9342A0C652600E4C817 /* TabManagerView.swift in Sources */,
+				858D8F432A0BC234002746D1 /* FlowerDetector.mlmodel in Sources */,
+				850E83442A0D15F4007077B8 /* CameraView.swift in Sources */,
+				850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */,
+				850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */,
 				858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */,
+				85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */,
+				85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */,
 				858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */,
+				85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +466,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -420,11 +485,14 @@
 				DEVELOPMENT_TEAM = F2MBMJ3PK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PLESE ALLOW IT";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow it too";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +517,14 @@
 				DEVELOPMENT_TEAM = F2MBMJ3PK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "PLESE ALLOW IT";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow it too";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
