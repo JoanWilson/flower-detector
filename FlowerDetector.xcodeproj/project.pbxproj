@@ -19,6 +19,9 @@
 		858D8F362A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F352A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift */; };
 		858D8F432A0BC234002746D1 /* FlowerDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F422A0BC234002746D1 /* FlowerDetector.mlmodel */; };
 		85C2D5752A0D878500CA8B41 /* FlowerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C2D5742A0D878500CA8B41 /* FlowerType.swift */; };
+		85C9F46A2A1275A7002D6C2F /* Flowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F4692A1275A7002D6C2F /* Flowers.swift */; };
+		85C9F46C2A12761D002D6C2F /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F46B2A12761D002D6C2F /* LocalManager.swift */; };
+		85C9F46E2A1277EF002D6C2F /* flowerData.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C9F46D2A1277EF002D6C2F /* flowerData.json */; };
 		85D9D9342A0C652600E4C817 /* TabManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9332A0C652600E4C817 /* TabManagerView.swift */; };
 		85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9352A0C691100E4C817 /* HomeView.swift */; };
 		85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9372A0C717D00E4C817 /* IdentifierView.swift */; };
@@ -59,6 +62,9 @@
 		858D8F352A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetectorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		858D8F422A0BC234002746D1 /* FlowerDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FlowerDetector.mlmodel; path = ../../../Projects/FlowerDetector.mlmodel; sourceTree = "<group>"; };
 		85C2D5742A0D878500CA8B41 /* FlowerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerType.swift; sourceTree = "<group>"; };
+		85C9F4692A1275A7002D6C2F /* Flowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flowers.swift; sourceTree = "<group>"; };
+		85C9F46B2A12761D002D6C2F /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
+		85C9F46D2A1277EF002D6C2F /* flowerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flowerData.json; sourceTree = SOURCE_ROOT; };
 		85D9D9332A0C652600E4C817 /* TabManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerView.swift; sourceTree = "<group>"; };
 		85D9D9352A0C691100E4C817 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		85D9D9372A0C717D00E4C817 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */,
 				858D8F1A2A0BC1E5002746D1 /* ContentView.swift */,
 				858D8F1C2A0BC1E6002746D1 /* Assets.xcassets */,
+				85C9F46D2A1277EF002D6C2F /* flowerData.json */,
 				858D8F1E2A0BC1E6002746D1 /* Preview Content */,
 			);
 			path = FlowerDetector;
@@ -155,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				85C2D5742A0D878500CA8B41 /* FlowerType.swift */,
+				85C9F4692A1275A7002D6C2F /* Flowers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 		85C2D5732A0D873A00CA8B41 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				85C9F46B2A12761D002D6C2F /* LocalManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C9F46E2A1277EF002D6C2F /* flowerData.json in Resources */,
 				858D8F202A0BC1E6002746D1 /* Preview Assets.xcassets in Resources */,
 				858D8F1D2A0BC1E6002746D1 /* Assets.xcassets in Resources */,
 			);
@@ -320,9 +330,11 @@
 				850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */,
 				858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */,
 				85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */,
+				85C9F46A2A1275A7002D6C2F /* Flowers.swift in Sources */,
 				85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */,
 				858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */,
 				85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */,
+				85C9F46C2A12761D002D6C2F /* LocalManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

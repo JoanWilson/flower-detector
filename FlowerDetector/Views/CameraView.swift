@@ -12,6 +12,7 @@ struct CameraView: View {
     @State var image: UIImage = UIImage(named: "dente")!
     let predictionsToShow = 4
     private let classifier = ImagePredictor()
+    private let localManager = LocalManager()
     
     
     var body: some View {
@@ -24,6 +25,10 @@ struct CameraView: View {
                 .clipped()
             
             Spacer()
+            
+            Button("Json") {
+                localManager.loadJson(fileName: "")
+            }
             
             Button {
                 showCamera.toggle()

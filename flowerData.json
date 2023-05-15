@@ -1,0 +1,124 @@
+{
+  "flowers": [
+    {
+      "name": "aster",
+      "namePortuguese": "aster",
+      "scientificName": "Asteraceae",
+      "description": "Asters são plantas populares de jardim, conhecidas por suas flores semelhantes a margaridas que florescem no final do verão e no outono. Elas vêm em uma ampla variedade de cores, incluindo branco, rosa, roxo e azul."
+    },
+    {
+      "name": "astilbe",
+      "namePortuguese": "astilbe",
+      "scientificName": "Astilbe",
+      "description": "As astilbes são plantas populares de jardim, valorizadas por seus altos cachos de flores plumosas que florescem em tons de rosa, vermelho, branco e roxo. Elas preferem condições sombreadas e úmidas e são frequentemente plantadas em jardins de bosques."
+    },
+    {
+      "name": "bellflower",
+      "namePortuguese": "campânula",
+      "scientificName": "Campanula",
+      "description": "As campânulas são plantas encantadoras que produzem flores delicadas em forma de sino em tons de azul, rosa e branco. Elas são plantas versáteis que podem ser cultivadas em uma variedade de cenários de jardim, incluindo jardins de pedras, bordas e jardins campestres."
+    },
+    {
+      "name": "blackEyedSusan",
+      "namePortuguese": "rudbéquia",
+      "scientificName": "Rudbeckia hirta",
+      "description": "As Rudbeckias são perenes alegres e fáceis de cultivar que florescem no final do verão e no outono. Elas produzem flores amarelas brilhantes com centros escuros e são atraentes para abelhas e borboletas. Elas são frequentemente usadas em prados de flores silvestres e áreas naturalizadas."
+    },
+    {
+      "name": "calendula",
+      "namePortuguese": "calêndula",
+      "scientificName": "Calendula officinalis",
+      "description": "As calêndulas são anuais alegres que produzem flores brilhantes em laranja ou amarelo durante todo o verão e outono. Elas são fáceis de cultivar e são frequentemente usadas em jardins campestres, bordas e recipientes. Elas também são ervas medicinais populares com propriedades anti-inflamatórias e antissépticas."
+    },
+    {
+      "name": "carnation",
+      "namePortuguese": "cravo",
+      "scientificName": "Dianthus caryophyllus",
+      "description": "Os cravos são flores cortadas populares que vêm em uma variedade de cores, incluindo branco, rosa, vermelho e amarelo. Eles têm uma fragrância picante e são frequentemente usados em buquês e arranjos florais. Eles também são perenes fáceis de cultivar que fazem adições adoráveis a jardins e contêineres."
+    },
+    {
+      "name": "coreopsis",
+      "namePortuguese": "coreópsis",
+      "scientificName": "Coreopsis",
+      "description": "As coreópsis são plantas perenes fáceis de cultivar que produzem flores brilhantes em tons de amarelo, vermelho e rosa. Elas preferem pleno sol e solo bem drenado e são frequentemente plantadas em jardins de pedras, bordas e jardins campestres. Elas também são atraentes para borboletas e abelhas."
+    },
+    {
+      "name": "daffodil",
+      "namePortuguese": "narciso",
+      "scientificName": "Narcissus",
+      "description": "Os narcisos são flores bulbosas conhecidas por suas pétalas em forma de trombeta e cores vibrantes. Eles são frequentemente vistos em jardins de primavera e são conhecidos por serem símbolos de renovação e esperança. Eles crescem melhor em sol pleno ou parcial e solo bem drenado."
+    },
+    {
+      "name": "daisy",
+      "namePortuguese": "margarida",
+      "scientificName": "Bellis perennis",
+      "description": "As margaridas são flores perenes comummente encontradas em jardins. Elas têm cabeças florais compostas por discos centrais amarelos rodeados por pétalas brancas ou cor-de-rosa. Elas preferem sol pleno ou parcial e solo bem drenado e podem ser cultivadas em vasos ou plantadas no solo."
+    },
+    {
+      "name": "dandelion",
+      "namePortuguese": "dente-de-leão",
+      "scientificName": "Taraxacum officinale",
+      "description": "Os dente-de-leão são plantas com flores amarelas brilhantes e sementes fluffly que são facilmente carregadas pelo vento. Eles são considerados por alguns como uma erva daninha, mas também são valorizados por suas propriedades medicinais e culinárias. Eles preferem sol pleno e solo bem drenado."
+    },
+    {
+      "name": "iris",
+      "namePortuguese": "íris",
+      "scientificName": "Iris",
+      "description": "As íris são flores perenes com uma variedade de cores vibrantes, incluindo roxo, azul, amarelo, laranja e branco. Elas são frequentemente encontradas em jardins de flores e podem ser cultivadas em vasos. Elas preferem sol pleno ou parcial e solo bem drenado."
+    },
+    {
+      "name": "lavender",
+      "namePortuguese": "lavanda",
+      "scientificName": "Lavandula",
+      "description": "A lavanda é uma planta aromática com folhas cinza-esverdeadas e flores em tons de roxo, azul e rosa. Ela é valorizada por seu aroma distinto e é frequentemente usada em perfumes, sabonetes e outros produtos de cuidado pessoal. Ela prefere sol pleno e solo bem drenado."
+    },
+    {
+      "name": "lily",
+      "namePortuguese": "lírio",
+      "scientificName": "Lilium",
+      "description": "Os lírios são flores bulbosas conhecidas por suas grandes e vistosas flores em forma de trombeta. Eles vêm em uma variedade de cores, incluindo branco, amarelo, rosa e vermelho. Eles são frequentemente usados em arranjos florais e são valorizados por sua fragrância doce. Eles preferem sol pleno ou parcial e solo bem drenado."
+    },
+    {
+      "name": "magnolia",
+      "namePortuguese": "magnólia",
+      "scientificName": "Magnolia",
+      "description": "As magnólias são árvores ou arbustos ornamentais conhecidos por suas flores grandes e vistosas em tons de branco, rosa ou roxo. Elas são frequentemente usadas em paisagismo e são valorizadas por sua beleza e aroma doce. Elas preferem sol pleno ou parcial e solo bem drenado."
+    },
+    {
+      "name": "marigold",
+      "namePortuguese": "cravo-de-defunto",
+      "scientificName": "Tagetes",
+      "description": "Os cravos-de-defunto são plantas anuais conhecidas por suas flores amarelas ou laranjas brilhantes. Eles são frequentemente usados em paisagismo devido à sua capacidade de afastar insetos nocivos. Eles preferem sol pleno e solo bem drenado."
+    },
+    {
+      "name": "orchid",
+      "namePortuguese": "orquídea",
+      "scientificName": "Orchidaceae",
+      "description": "As orquídeas são uma das maiores famílias de plantas com flores do mundo, com mais de 20.000 espécies conhecidas. Elas são valorizadas por suas flores coloridas e complexas, que vêm em uma ampla variedade de formas e tamanhos. Elas preferem sombra parcial e solo bem drenado."
+    },
+    {
+      "name": "poppy",
+      "namePortuguese": "papoula",
+      "scientificName": "Papaver",
+      "description": "As papoulas são plantas anuais ou perenes conhecidas por suas flores vistosas e delicadas em tons de vermelho, laranja e rosa. Elas preferem sol pleno e solo bem drenado e podem ser facilmente cultivadas a partir de sementes."
+    },
+    {
+      "name": "rose",
+      "namePortuguese": "rosa",
+      "scientificName": "Rosa",
+      "description": "As rosas são uma das flores mais populares do mundo, com uma ampla variedade de cores e formas disponíveis. Elas são frequentemente usadas em buquês e arranjos florais, bem como em produtos de cuidado pessoal, como perfumes e cremes. Elas preferem sol pleno ou parcial e solo bem drenado."
+    },
+    {
+      "name": "sunflower",
+      "namePortuguese": "girassol",
+      "scientificName": "Helianthus",
+      "description": "Os girassóis são plantas anuais conhecidas por suas flores amarelas brilhantes e cabeças florais grandes e distintas. Eles são frequentemente cultivados por sua semente, que é valorizada por sua alta quantidade de óleo e é usada em uma variedade de alimentos e produtos de cuidado pessoal. Eles preferem sol pleno e solo bem drenado."
+    },
+    {
+      "name": "tulip",
+      "namePortuguese": "tulipa",
+      "scientificName": "Tulipa",
+      "description": "As tulipas são flores bulbosas conhecidas por suas pétalas vibrantes e em forma de taça. Elas são frequentemente cultivadas em jardins de primavera e são valorizadas por sua beleza e simbolismo. Elas preferem sol pleno ou parcial e solo bem drenado."
+    }
+  ]
+}
