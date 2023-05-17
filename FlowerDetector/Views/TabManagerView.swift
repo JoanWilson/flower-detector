@@ -14,17 +14,17 @@ struct TabManagerView: View {
         TabView {
             HomeView()
                 .tabItem {
-                    Label("Flores", systemImage: "info")
+                    Label("Flores", systemImage: "camera.macro")
                         .environment(\.symbolVariants, .none)
                 }
             CameraView()
                 .tabItem {
-                    Image(systemName: "info")
+                    Image(systemName: "camera.on.rectangle.fill")
                     Text("Identificar")
                 }
             Text("About")
                 .tabItem {
-                    Label("Sobre", systemImage: "info")
+                    Label("Sobre", systemImage: "info.circle.fill")
                         .environment(\.symbolVariants, .none)
                 }
         }

@@ -17,6 +17,20 @@ struct FlowersData: Codable {
 }
 
 // MARK: - Flower
-struct Flower: Codable {
+struct Flower: Codable, Hashable {
     let name, namePortuguese, scientificName, description: String
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(namePortuguese)
+        hasher.combine(scientificName)
+        hasher.combine(description)
+    }
+    
+    static func == (lhs: Flower, rhs: Flower) -> Bool {
+        return lhs.name == rhs.name &&
+        lhs.namePortuguese == rhs.namePortuguese &&
+        lhs.scientificName == rhs.scientificName &&
+        lhs.description == rhs.description
+    }
 }
