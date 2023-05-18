@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83412A0D1455007077B8 /* CameraRepresentable.swift */; };
-		850E83442A0D15F4007077B8 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83432A0D15F4007077B8 /* CameraView.swift */; };
 		850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83452A0D347A007077B8 /* ImagePredictor.swift */; };
 		858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */; };
 		858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F1A2A0BC1E5002746D1 /* ContentView.swift */; };
@@ -18,6 +17,7 @@
 		858D8F342A0BC1E7002746D1 /* FlowerDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F332A0BC1E7002746D1 /* FlowerDetectorUITests.swift */; };
 		858D8F362A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F352A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift */; };
 		858D8F432A0BC234002746D1 /* FlowerDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F422A0BC234002746D1 /* FlowerDetector.mlmodel */; };
+		85BCD4E42A15C7AE0050E38B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83432A0D15F4007077B8 /* CameraView.swift */; };
 		85C2D5752A0D878500CA8B41 /* FlowerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C2D5742A0D878500CA8B41 /* FlowerType.swift */; };
 		85C9F46A2A1275A7002D6C2F /* Flowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F4692A1275A7002D6C2F /* Flowers.swift */; };
 		85C9F46C2A12761D002D6C2F /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F46B2A12761D002D6C2F /* LocalManager.swift */; };
@@ -322,10 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				85C2D5752A0D878500CA8B41 /* FlowerType.swift in Sources */,
+				85BCD4E42A15C7AE0050E38B /* CameraView.swift in Sources */,
 				85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */,
 				85D9D9342A0C652600E4C817 /* TabManagerView.swift in Sources */,
 				858D8F432A0BC234002746D1 /* FlowerDetector.mlmodel in Sources */,
-				850E83442A0D15F4007077B8 /* CameraView.swift in Sources */,
 				850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */,
 				850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */,
 				858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */,

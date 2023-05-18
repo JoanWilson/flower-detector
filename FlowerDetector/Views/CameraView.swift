@@ -83,8 +83,9 @@ struct CameraView: View {
                                         
                                     
                                     Text(prediction.confidencePercentage)
+                                        .fontWeight(.title)
                                         
-                                        .background(.blue)
+                                        
                                 }
                                 
                                     
