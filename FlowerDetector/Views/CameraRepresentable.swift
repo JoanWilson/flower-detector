@@ -53,14 +53,19 @@ extension CameraRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                self.parent.delegate.setImage(uiImage: image)
-                self.parent.delegate.classifyImage(image)
-                self.parent.isPresented = false
+                
+                print("Carregando...")
+                DispatchQueue.global().async {
+                    self.parent.delegate.classifyImage(image)
+                    DispatchQueue.main.async {
+                        self.parent.delegate.setImage(uiImage: image)
+                        self.parent.isPresented = false
+                        
+                        print("Carregou")
+                    }
+                }
+                
             }
         }
     }
-}
-
-extension CameraRepresentable {
-    
 }

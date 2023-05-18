@@ -34,3 +34,29 @@ struct Flower: Codable, Hashable {
         lhs.description == rhs.description
     }
 }
+
+struct FlowerIterator: IteratorProtocol {
+    private let flowers: [Flower]
+    private var currentIndex = 0
+    
+    init(flowers: [Flower]) {
+        self.flowers = flowers
+    }
+    
+    mutating func next() -> Flower? {
+        guard currentIndex < flowers.count else {
+            return nil
+        }
+        
+        let nextFlower = flowers[currentIndex]
+        currentIndex += 1
+        return nextFlower
+    }
+}
+
+// MARK: - Conform Flower to Sequence
+extension Flower: Sequence {
+    func makeIterator() -> FlowerIterator {
+        return FlowerIterator(flowers: [self])
+    }
+}

@@ -11,7 +11,7 @@ import ImageIO
 
 struct Prediction: Hashable {
 //    let id = UUID()
-    let classification: String
+    var classification: String
     let confidencePercentage: String
 
     

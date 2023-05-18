@@ -14,107 +14,129 @@ struct CameraView: View {
     private let classifier = ImagePredictor()
     private let localManager = LocalManager()
     @State var path: NavigationPath = NavigationPath()
-    @State var predictions: [Prediction] = []
+    @State var predictions: [Prediction] = [Prediction(classification: "teste", confidencePercentage: "teste")]
     
     var body: some View {
         NavigationStack {
                 ScrollView {
-                    if image != nil {
-                        Image(uiImage: image!)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(
-                                width: UIScreen.main.bounds.width * 0.9,
-                                height: UIScreen.main.bounds.height * 0.3
-                            )
-                            .cornerRadius(10)
-                            .clipped()
-                    } else {
-                        HStack {
-                            VStack {
-                                Image(systemName: "camera.circle.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 40)
-                                    .foregroundColor(.gray)
-                                Text("Clique no botão de cima para adicionar ou bater uma foto da flor")
-                                    .frame(maxWidth: 200)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.gray)
-
-                            }
-                        }
-                        .frame(
-                            width: UIScreen.main.bounds.width * 0.9,
-                            height: UIScreen.main.bounds.height * 0.3
-                        )
-                        .background(.regularMaterial)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.gray, lineWidth: 2)
-                        )
-                        .fullScreenCover(isPresented: $showCamera) {
-                            CameraRepresentable(isPresented: $showCamera, delegate: self)
-                                .ignoresSafeArea(.all)
-                        }
-                        .cornerRadius(10)
-                        
-                    }
                     VStack {
-                        if predictions.isEmpty {
-                             
+                        Text("Imagem a ser classificada")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 25)
+                        
+                        if image != nil {
+                            Image(uiImage: image!)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(
+                                    width: UIScreen.main.bounds.width * 0.9,
+                                    height: UIScreen.main.bounds.height * 0.3
+                                )
+                                .cornerRadius(10)
+                                .clipped()
                         } else {
-                            Text("Resultados da análise")
-                                .font(.headline)
-                                .frame(maxWidth: .infinity, alignment: .leading)
                             
-                            
-                            VStack {
-                                ForEach(predictions, id: \.self) { prediction in
-                                    HStack {
-                                        Text(prediction.classification)
-                                        HStack {
+                            Button {
+                                showCamera.toggle()
+                            } label: {
+                                HStack {
+                                    VStack {
+                                        Image(systemName: "camera.circle.fill")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 40)
+                                            .foregroundColor(.gray)
+                                        Text("Clique no botão de cima para adicionar ou bater uma foto da flor")
+                                            .frame(maxWidth: 200)
+                                            .multilineTextAlignment(.center)
+                                            .foregroundColor(.gray)
 
-                                            Rectangle()
-                                                .size(width: (UIScreen.main.bounds.width*0.7)*getDouble(prediction.confidencePercentage), height: 20)
-                                                .cornerRadius(10)
-                                                .foregroundColor(Color.green)
-                                            
-                                            Text("\(prediction.confidencePercentage)%")
-                                                .font(.headline)
-
-                                        }
-        
-        
-                                    }.padding(.horizontal)
-                                    Divider()
+                                    }
                                 }
+                                .frame(
+                                    width: UIScreen.main.bounds.width * 0.9,
+                                    height: UIScreen.main.bounds.height * 0.3
+                                )
+                                .background(.regularMaterial)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(.gray, lineWidth: 2)
+                                )
+                                .fullScreenCover(isPresented: $showCamera) {
+                                    CameraRepresentable(isPresented: $showCamera, delegate: self)
+                                        .ignoresSafeArea(.all)
+                                }
+                                .cornerRadius(10)
                             }
-                            .frame(
-                                width: UIScreen.main.bounds.width * 0.9
-                            )
-                            .padding(.top)
-                            .background(Color(UIColor.systemGray5))
-                            .cornerRadius(10)
+                            
+                            
                         }
-                        
-                        
-    
-                    }
-                    .padding(25)
+                        VStack {
+                            if predictions.isEmpty {
+                                 
+                            } else {
+                                Text("Resultados da análise")
+                                    .font(.headline)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                Text("Clique em qualquer uma das predições abaixo para saber mais sobre a possível espécie identificada.")
+                                    .font(.subheadline)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                VStack {
+                                    ForEach(predictions, id: \.self) { prediction in
+                                        VStack(alignment: .leading) {
+                                            Text(prediction.classification)
+                                            HStack {
+
+                                                Rectangle()
+                                                    .size(width: (UIScreen.main.bounds.width*0.7)*getDouble(prediction.confidencePercentage), height: 25)
+                                                    .cornerRadius(5)
+                                                    .foregroundColor(Color.green)
+                                                
+                                                Text("\(prediction.confidencePercentage)%")
+                                                    .font(.headline)
+
+                                            }
             
-                    Spacer()
+            
+                                        }
+                                        .padding(.horizontal)
+                                        .buttonStyle(.plain)
+    
+                                        
+                                        Divider()
+                                    }
+                                }
+                                .frame(
+                                    width: UIScreen.main.bounds.width * 0.9
+                                )
+                                .padding(.top)
+                                .background(Color(UIColor.systemGray6))
+                                .cornerRadius(10)
+                            }
+                        }
+                        .padding(25)
+                
+                        Spacer()
+                    }
+                    
                 }
                 .navigationTitle("Identificador")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             showCamera.toggle()
+                            print(showCamera)
                         } label: {
                             Image(systemName: "camera.circle.fill")
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .tint(.green)
+                        }.fullScreenCover(isPresented: $showCamera) {
+                            CameraRepresentable(isPresented: $showCamera, delegate: self)
+                                .ignoresSafeArea(.all)
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -125,7 +147,7 @@ struct CameraView: View {
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .tint(.green)
-                        }
+                        }.disabled(true)
                     }
                 }
                 
@@ -138,6 +160,22 @@ struct CameraView: View {
 
 extension CameraView: CameraRepresentableDelegate {
     
+    func getFlowerNameInPortuguese(_ flowerString: String) -> String {
+        let flowers = localManager.loadJson(fileName: "flowerData")
+        guard let flowersWrapped = flowers else {
+            return "Unknown"
+        }
+        
+        
+        for flower in flowersWrapped.flowers {
+            if flower.name == flowerString.lowercased() {
+                return flower.namePortuguese.capitalized
+            }
+        }
+        
+        return "Unknown"
+    }
+    
     func getDouble(_ string: String) -> Double {
         
             guard let percentage = Double(string) else {
@@ -148,6 +186,7 @@ extension CameraView: CameraRepresentableDelegate {
     }
     
     func classifyImage(_ uiImage: UIImage) {
+        self.predictions = []
         do {
             try self.classifier.makePredictions(for: uiImage, completionHandler: imagePredictionHandler)
         } catch {
@@ -168,7 +207,18 @@ extension CameraView: CameraRepresentableDelegate {
         let formattedPredictions = formatPredictions(predictions)
         
         let predictionString = formattedPredictions.joined(separator: "\n")
-        dump(predictionString)
+        
+        var count = 1
+        for prediction in predictions {
+            if count > 4 {
+                break
+            }
+            let predicitionNamePortuguese = getFlowerNameInPortuguese(prediction.classification)
+            let newPrediction = Prediction(classification: predicitionNamePortuguese, confidencePercentage: prediction.confidencePercentage)
+            
+            self.predictions.append(newPrediction)
+            count += 1
+        }
     }
     
     private func formatPredictions(_ predictions: [Prediction]) -> [String] {
