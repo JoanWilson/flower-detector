@@ -10,15 +10,10 @@ import UIKit
 import ImageIO
 
 struct Prediction: Hashable {
+//    let id = UUID()
     let classification: String
     let confidencePercentage: String
-    
-    func getPercentage() -> Double {
-        guard let percentage = Double(confidencePercentage) else {
-            return 1
-        }
-        return  percentage / 100
-    }
+
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(classification)
