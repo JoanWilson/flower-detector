@@ -9,9 +9,25 @@ import Vision
 import UIKit
 import ImageIO
 
-struct Prediction {
+struct Prediction: Hashable {
     let classification: String
     let confidencePercentage: String
+    
+    func getPercentage() -> Double {
+        guard let percentage = Double(confidencePercentage) else {
+            return 1
+        }
+        return  percentage / 100
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(classification)
+        hasher.combine(confidencePercentage)
+    }
+    
+    static func ==(lhs: Prediction, rhs: Prediction) -> Bool {
+        return lhs.classification == rhs.classification && lhs.confidencePercentage == rhs.confidencePercentage
+    }
 }
 
 class ImagePredictor {
@@ -33,15 +49,15 @@ class ImagePredictor {
         guard let imageClassifierVisionModel = try? VNCoreMLModel(for: imageClassifierModel) else {
             fatalError("App failed to create a `VNCoreMLModel` instance.")
         }
-
+        
         return imageClassifierVisionModel
     }
     
     private func createImageClassificationRequest() -> VNImageBasedRequest {
-
+        
         let imageClassificationRequest = VNCoreMLRequest(model: ImagePredictor.imageClassifier,
                                                          completionHandler: visionRequestHandler)
-
+        
         imageClassificationRequest.imageCropAndScaleOption = .centerCrop
         return imageClassificationRequest
     }
@@ -50,18 +66,18 @@ class ImagePredictor {
         guard let predictionHandler = predictionHandlers.removeValue(forKey: request) else {
             fatalError("Every request must have a prediction handler.")
         }
-
+        
         var predictions: [Prediction]? = nil
-
+        
         defer {
             predictionHandler(predictions)
         }
-
+        
         if let error = error {
             print("Vision image classification error...\n\n\(error.localizedDescription)")
             return
         }
-
+        
         if request.results == nil {
             print("Vision request had no results.")
             return
@@ -71,7 +87,7 @@ class ImagePredictor {
             print("VNRequest produced the wrong result type: \(type(of: request.results)).")
             return
         }
-
+        
         predictions = observations.map { observation in
             Prediction(classification: observation.identifier,
                        confidencePercentage: observation.confidencePercentageString)
@@ -80,38 +96,38 @@ class ImagePredictor {
     
     public func makePredictions(for photo: UIImage, completionHandler: @escaping ImagePredictionHandler) throws {
         let orientation = CGImagePropertyOrientation(photo.imageOrientation)
-
+        
         guard let photoImage = photo.cgImage else {
             fatalError("Photo doesn't have underlying CGImage.")
         }
-
+        
         let imageClassificationRequest = createImageClassificationRequest()
         predictionHandlers[imageClassificationRequest] = completionHandler
-
+        
         let handler = VNImageRequestHandler(cgImage: photoImage, orientation: orientation)
         let requests: [VNRequest] = [imageClassificationRequest]
-
+        
         try handler.perform(requests)
     }
-
+    
     
 }
 
 extension VNClassificationObservation {
     var confidencePercentageString: String {
         let percentage = confidence * 100
-
+        
         switch percentage {
-            case 100.0...:
-                return "100%"
-            case 10.0..<100.0:
-                return String(format: "%2.1f", percentage)
-            case 1.0..<10.0:
-                return String(format: "%2.1f", percentage)
-            case ..<1.0:
-                return String(format: "%1.2f", percentage)
-            default:
-                return String(format: "%2.1f", percentage)
+        case 100.0...:
+            return "100%"
+        case 10.0..<100.0:
+            return String(format: "%2.1f", percentage)
+        case 1.0..<10.0:
+            return String(format: "%2.1f", percentage)
+        case ..<1.0:
+            return String(format: "%1.2f", percentage)
+        default:
+            return String(format: "%2.1f", percentage)
         }
     }
 }
@@ -119,15 +135,15 @@ extension VNClassificationObservation {
 extension CGImagePropertyOrientation {
     init(_ orientation: UIImage.Orientation) {
         switch orientation {
-            case .up: self = .up
-            case .down: self = .down
-            case .left: self = .left
-            case .right: self = .right
-            case .upMirrored: self = .upMirrored
-            case .downMirrored: self = .downMirrored
-            case .leftMirrored: self = .leftMirrored
-            case .rightMirrored: self = .rightMirrored
-            @unknown default: self = .up
+        case .up: self = .up
+        case .down: self = .down
+        case .left: self = .left
+        case .right: self = .right
+        case .upMirrored: self = .upMirrored
+        case .downMirrored: self = .downMirrored
+        case .leftMirrored: self = .leftMirrored
+        case .rightMirrored: self = .rightMirrored
+        @unknown default: self = .up
         }
     }
 }
