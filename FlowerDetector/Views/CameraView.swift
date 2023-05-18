@@ -14,7 +14,7 @@ struct CameraView: View {
     private let classifier = ImagePredictor()
     private let localManager = LocalManager()
     @State var path: NavigationPath = NavigationPath()
-    @State var predictions: [Prediction] = [Prediction(classification: "teste", confidencePercentage: "teste")]
+    @State var predictions: [Prediction] = []
     
     var body: some View {
         NavigationStack {
@@ -206,7 +206,7 @@ extension CameraView: CameraRepresentableDelegate {
         
         let formattedPredictions = formatPredictions(predictions)
         
-        let predictionString = formattedPredictions.joined(separator: "\n")
+//        let predictionString = formattedPredictions.joined(separator: "\n")
         
         var count = 1
         for prediction in predictions {

@@ -27,6 +27,7 @@
 		85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9372A0C717D00E4C817 /* IdentifierView.swift */; };
 		85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9392A0C835100E4C817 /* CameraModel.swift */; };
 		85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */; };
+		85F6BE1A2A16667900708B35 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6BE192A16667900708B35 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		85D9D9372A0C717D00E4C817 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
 		85D9D9392A0C835100E4C817 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView2.swift; sourceTree = "<group>"; };
+		85F6BE192A16667900708B35 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				850E83412A0D1455007077B8 /* CameraRepresentable.swift */,
 				850E83432A0D15F4007077B8 /* CameraView.swift */,
 				850E83452A0D347A007077B8 /* ImagePredictor.swift */,
+				85F6BE192A16667900708B35 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */,
 				858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */,
 				85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */,
+				85F6BE1A2A16667900708B35 /* DetailView.swift in Sources */,
 				85C9F46C2A12761D002D6C2F /* LocalManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
