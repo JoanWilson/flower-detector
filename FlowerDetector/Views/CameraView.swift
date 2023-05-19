@@ -28,6 +28,8 @@ struct CameraView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 25)
                     
+                        .fontDesign(.serif)
+                    
                     if image != nil {
                         Image(uiImage: image!)
                             .resizable()
@@ -54,6 +56,7 @@ struct CameraView: View {
                                         .frame(maxWidth: 200)
                                         .multilineTextAlignment(.center)
                                         .foregroundColor(.gray)
+                                    
                                     
                                 }
                             }
@@ -83,16 +86,19 @@ struct CameraView: View {
                                 .font(.headline)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             
+                                .fontDesign(.serif)
+                            
                             Text("Clique em qualquer uma das predições abaixo para saber mais sobre a possível espécie identificada.")
                                 .font(.subheadline)
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                .fontDesign(.serif)
                             
                             VStack {
                                 ForEach(predictions, id: \.self) { prediction in
                                     VStack(alignment: .leading) {
                                         NavigationLink {
                                             DetailView(prediction: prediction.classification)
-//                                            showDetail.toggle()
+                                            //                                            showDetail.toggle()
                                         } label: {
                                             VStack(alignment: .leading) {
                                                 Text(prediction.classification)
@@ -115,7 +121,7 @@ struct CameraView: View {
                                         .padding(.horizontal)
                                         .buttonStyle(.plain)
                                         
-                    
+                                        
                                     }
                                     
                                     

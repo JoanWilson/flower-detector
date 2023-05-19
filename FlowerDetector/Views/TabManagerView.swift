@@ -21,7 +21,7 @@ struct TabManagerView: View {
                     Image(systemName: "camera.on.rectangle.fill")
                     Text("Identificar")
                 }
-            Text("About")
+            AboutView()
                 .tabItem {
                     Label("Sobre", systemImage: "info.circle.fill")
                         .environment(\.symbolVariants, .none)
