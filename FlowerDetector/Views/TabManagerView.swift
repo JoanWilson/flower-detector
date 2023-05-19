@@ -9,6 +9,14 @@ import SwiftUI
 
 struct TabManagerView: View {
     
+    init() {
+        let design = UIFontDescriptor.SystemDesign.serif
+        let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle)
+            .withDesign(design)!
+        let font = UIFont.init(descriptor: descriptor, size: 48)
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
+    }
+    
     var body: some View {
         TabView {
             HomeView()

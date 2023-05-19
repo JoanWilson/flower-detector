@@ -14,6 +14,14 @@ struct HomeView: View {
     
     @State var data: [Flower] = []
     
+//    init() {
+//        let design = UIFontDescriptor.SystemDesign.serif
+//        let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle)
+//            .withDesign(design)!
+//        let font = UIFont.init(descriptor: descriptor, size: 48)
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
+//        
+//    }
     
     var body: some View {
         NavigationStack(path: $homeViewPaths) {
@@ -54,7 +62,6 @@ struct HomeView: View {
                 }
             }
             .searchable(text: $searchText)
-            .navigationTitle("Flores")
             .onAppear {
                 let flowers = localManager.loadJson(fileName: "flowerData")
                 guard let flowersWrapped = flowers else {
@@ -63,6 +70,7 @@ struct HomeView: View {
                 
                 self.data = flowersWrapped.flowers
             }
+            .navigationTitle("Flores")
             
         }
     }

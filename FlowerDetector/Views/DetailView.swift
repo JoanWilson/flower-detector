@@ -14,8 +14,22 @@ struct DetailView: View {
     @State var flower: Flower?
     var localManager = LocalManager()
     
+    
+    
     init(flower: Flower) {
         self._flower = State(initialValue: flower)
+        
+        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 24, weight: .regular, scale: .large)
+
+        let backImage = UIImage(systemName: "chevron.left.circle.fill")?
+            .withConfiguration(symbolConfiguration)
+            .applyingSymbolConfiguration(.init(paletteColors: [.black, .white]))
+
+        let scrollEdgeNavBarAppearance = UINavigationBarAppearance()
+        scrollEdgeNavBarAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
+        scrollEdgeNavBarAppearance.configureWithTransparentBackground()
+
+        UINavigationBar.appearance().scrollEdgeAppearance = scrollEdgeNavBarAppearance
     }
     
     init(prediction: String) {
@@ -74,6 +88,7 @@ struct DetailView: View {
             .padding()
         }
         .edgesIgnoringSafeArea(.top)
+        
     }
 }
 
