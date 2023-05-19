@@ -25,7 +25,7 @@ struct HomeView: View {
                         ForEach(data.filter { searchText.isEmpty ? true : $0.namePortuguese.lowercased().contains(searchText.lowercased()) }, id: \.namePortuguese) { item in
                             
                             NavigationLink {
-                                
+                                DetailView(flower: item)
                             } label: {
                                 VStack {
                                     Image(item.name)
@@ -37,10 +37,13 @@ struct HomeView: View {
                                         .padding(.horizontal, 5)
                                     
                                     Text(item.namePortuguese.capitalized)
-                                        .font(.subheadline)
+                                        .font(.body)
+                                        .fontWeight(.bold)
+                                        .fontDesign(.serif)
                                     Text(item.scientificName.capitalized)
                                         .italic()
                                         .font(.caption)
+                                        .fontDesign(.serif)
                                 }
                             }.buttonStyle(.plain)
                             
@@ -71,4 +74,11 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
+
+struct SerifNavigationBarTitle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(Font.custom("HelveticaNeue-Light", size: 24)) // Replace "SerifFontName" with the name of your desired serif font
+    }
+}
 
