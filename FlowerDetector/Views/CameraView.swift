@@ -17,6 +17,7 @@ struct CameraView: View {
     @State var path: NavigationPath = NavigationPath()
     @State var predictions: [Prediction] = []
     @State var allFlowers: [Flower] = []
+    @State var showLoadingModal: Bool = false
     
     
     var body: some View {
@@ -44,20 +45,24 @@ struct CameraView: View {
                         
                         Button {
                             showCamera.toggle()
+                            showLoadingModal.toggle()
                         } label: {
                             HStack {
                                 VStack {
-                                    Image(systemName: "camera.circle.fill")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 40)
-                                        .foregroundColor(.gray)
-                                    Text("Clique no botão de cima para adicionar ou bater uma foto da flor")
-                                        .frame(maxWidth: 200)
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(.gray)
-                                    
-                                    
+                                    if showLoadingModal == true {
+                                        ProgressView("Carregando Câmera")
+                                            .foregroundColor(.gray)
+                                    } else {
+                                        Image(systemName: "camera.circle.fill")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 40)
+                                            .foregroundColor(.gray)
+                                        Text("Clique no botão de cima para adicionar ou bater uma foto da flor")
+                                            .frame(maxWidth: 200)
+                                            .multilineTextAlignment(.center)
+                                            .foregroundColor(.gray)
+                                    }
                                 }
                             }
                             .frame(
@@ -185,6 +190,10 @@ struct CameraView: View {
 
 
 extension CameraView: CameraRepresentableDelegate {
+    
+    func modalLoadingToggle() {
+        self.showLoadingModal.toggle()
+    }
     
     func getFlowerWithPredictionName(_ prediction: String) -> Flower {
         for flower in self.allFlowers {

@@ -64,6 +64,7 @@ struct DetailView: View {
                         .font(.title2)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fontDesign(.serif)
+                        .italic()
                 }
                 
                 

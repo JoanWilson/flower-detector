@@ -10,6 +10,7 @@ import SwiftUI
 protocol CameraRepresentableDelegate {
     func setImage(uiImage: UIImage)
     func classifyImage(_ uiImage: UIImage)
+    func modalLoadingToggle()
 }
 
 struct CameraRepresentable: UIViewControllerRepresentable {
@@ -48,19 +49,17 @@ extension CameraRepresentable {
         
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             self.parent.isPresented = false
+            self.parent.delegate.modalLoadingToggle()
             print("Cancel pressed")
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                
-                print("Carregando...")
                 DispatchQueue.global().async {
                     self.parent.delegate.classifyImage(image)
                     DispatchQueue.main.async {
                         self.parent.delegate.setImage(uiImage: image)
                         self.parent.isPresented = false
-                        
                         print("Carregou")
                     }
                 }
