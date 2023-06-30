@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TabManagerView: View {
-    
     init() {
         let design = UIFontDescriptor.SystemDesign.serif
         let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle)

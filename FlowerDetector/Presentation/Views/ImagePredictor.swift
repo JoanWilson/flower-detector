@@ -9,21 +9,7 @@ import Vision
 import UIKit
 import ImageIO
 
-struct Prediction: Hashable {
-//    let id = UUID()
-    var classification: String
-    let confidencePercentage: String
 
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(classification)
-        hasher.combine(confidencePercentage)
-    }
-    
-    static func ==(lhs: Prediction, rhs: Prediction) -> Bool {
-        return lhs.classification == rhs.classification && lhs.confidencePercentage == rhs.confidencePercentage
-    }
-}
 
 class ImagePredictor {
     typealias ImagePredictionHandler = (_ predictions: [Prediction]?) -> Void

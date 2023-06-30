@@ -7,22 +7,16 @@
 
 import SwiftUI
 
+struct HomeViewModel {
+    
+}
+
 struct HomeView: View {
     @State private var homeViewPaths = NavigationPath()
     @State private var searchText = ""
     var localManager = LocalManager()
     
     @State var data: [Flower] = []
-    
-//    init() {
-//        let design = UIFontDescriptor.SystemDesign.serif
-//        let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle)
-//            .withDesign(design)!
-//        let font = UIFont.init(descriptor: descriptor, size: 48)
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
-//        
-//    }
-    
     var body: some View {
         NavigationStack(path: $homeViewPaths) {
             VStack {

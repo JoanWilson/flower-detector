@@ -25,11 +25,24 @@ struct AboutView: View {
                     
                         List {
                             Section("Imagens") {
-                                Text("As imagens foram proporcionadas pelo Unsplash de maneira gratuita.")
+                                Link(
+                                    destination: URL(string: "https://unsplash.com/")!) {
+                                        Text("As imagens foram proporcionadas pelo Unsplash de maneira gratuita.")
+                                    }
+                                
                             }
                             
-                            Section("Dataset") {
-                                Text("O dataset foi encontrado através do site Kaggle e possuem licença CC0.")
+                            Section {
+                                Link(
+                                    destination: URL(string: "https://www.kaggle.com/datasets/l3llff/flowers")!) {
+                                        Text("Flowers - L3IFF")
+                                    }
+                                Link(
+                                    destination: URL(string: "https://www.kaggle.com/datasets/alxmamaev/flowers-recognition")!) {
+                                        Text("Flowers Recognition - Alexander Mamaev")
+                                    }
+                            } header: {
+                                Text("Dataset obtido no Kaggle")
                             }
                             
                             Section("Modelo de IA") {

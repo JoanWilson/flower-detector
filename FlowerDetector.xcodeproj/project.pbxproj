@@ -10,6 +10,8 @@
 		850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83412A0D1455007077B8 /* CameraRepresentable.swift */; };
 		850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83452A0D347A007077B8 /* ImagePredictor.swift */; };
 		853505502A170BAF002F5F67 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535054F2A170BAF002F5F67 /* AboutView.swift */; };
+		8545A0792A1CF96100C148BD /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545A0782A1CF96100C148BD /* Prediction.swift */; };
+		855800D12A44ED8C00C32F63 /* FlowerDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 855800D02A44ED8C00C32F63 /* FlowerDetector.mlmodel */; };
 		858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */; };
 		858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858D8F1A2A0BC1E5002746D1 /* ContentView.swift */; };
 		858D8F1D2A0BC1E6002746D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858D8F1C2A0BC1E6002746D1 /* Assets.xcassets */; };
@@ -28,7 +30,6 @@
 		85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9392A0C835100E4C817 /* CameraModel.swift */; };
 		85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */; };
 		85F6BE1A2A16667900708B35 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6BE192A16667900708B35 /* DetailView.swift */; };
-		85F6BE1C2A1672A900708B35 /* FlowerDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 85F6BE1B2A1672A900708B35 /* FlowerDetector.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		850E83432A0D15F4007077B8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		850E83452A0D347A007077B8 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		8535054F2A170BAF002F5F67 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		8545A0782A1CF96100C148BD /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		855800D02A44ED8C00C32F63 /* FlowerDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FlowerDetector.mlmodel; path = ../../../../FlowerDetector.mlmodel; sourceTree = "<group>"; };
+		855800D22A44EDAD00C32F63 /* FlowerDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerDetector.mlmodel; sourceTree = "<group>"; };
 		858D8F152A0BC1E5002746D1 /* FlowerDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerDetectorApp.swift; sourceTree = "<group>"; };
 		858D8F1A2A0BC1E5002746D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,14 +70,13 @@
 		85C2D5742A0D878500CA8B41 /* FlowerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerType.swift; sourceTree = "<group>"; };
 		85C9F4692A1275A7002D6C2F /* Flowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flowers.swift; sourceTree = "<group>"; };
 		85C9F46B2A12761D002D6C2F /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
-		85C9F46D2A1277EF002D6C2F /* flowerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flowerData.json; sourceTree = SOURCE_ROOT; };
+		85C9F46D2A1277EF002D6C2F /* flowerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flowerData.json; path = FlowerDetector/Resources/flowerData.json; sourceTree = SOURCE_ROOT; };
 		85D9D9332A0C652600E4C817 /* TabManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerView.swift; sourceTree = "<group>"; };
 		85D9D9352A0C691100E4C817 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		85D9D9372A0C717D00E4C817 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
 		85D9D9392A0C835100E4C817 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView2.swift; sourceTree = "<group>"; };
 		85F6BE192A16667900708B35 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		85F6BE1B2A1672A900708B35 /* FlowerDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FlowerDetector.mlmodel; path = ../../FlowerDetector.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8545A0732A1CF8E900C148BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				855800D02A44ED8C00C32F63 /* FlowerDetector.mlmodel */,
+				85C2D5742A0D878500CA8B41 /* FlowerType.swift */,
+				85C9F4692A1275A7002D6C2F /* Flowers.swift */,
+				8545A0782A1CF96100C148BD /* Prediction.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8545A0742A1CF8EE00C148BD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				85C9F46B2A12761D002D6C2F /* LocalManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8545A0752A1CF8F300C148BD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8545A07D2A1CFB4500C148BD /* ViewModel */,
+				85D9D9322A0C651800E4C817 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8545A0762A1CF8FA00C148BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				858D8F1C2A0BC1E6002746D1 /* Assets.xcassets */,
+				85C9F46D2A1277EF002D6C2F /* flowerData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8545A07A2A1CF98600C148BD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */,
+				858D8F1A2A0BC1E5002746D1 /* ContentView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8545A07D2A1CFB4500C148BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		858D8F0C2A0BC1E5002746D1 = {
 			isa = PBXGroup;
 			children = (
@@ -124,14 +180,12 @@
 		858D8F172A0BC1E5002746D1 /* FlowerDetector */ = {
 			isa = PBXGroup;
 			children = (
-				85F6BE1B2A1672A900708B35 /* FlowerDetector.mlmodel */,
-				85C2D5732A0D873A00CA8B41 /* ViewModels */,
-				85C2D5722A0D873400CA8B41 /* Models */,
-				85D9D9322A0C651800E4C817 /* Views */,
-				858D8F182A0BC1E5002746D1 /* FlowerDetectorApp.swift */,
-				858D8F1A2A0BC1E5002746D1 /* ContentView.swift */,
-				858D8F1C2A0BC1E6002746D1 /* Assets.xcassets */,
-				85C9F46D2A1277EF002D6C2F /* flowerData.json */,
+				8545A07A2A1CF98600C148BD /* Application */,
+				8545A0762A1CF8FA00C148BD /* Resources */,
+				8545A0752A1CF8F300C148BD /* Presentation */,
+				8545A0742A1CF8EE00C148BD /* Data */,
+				8545A0732A1CF8E900C148BD /* Domain */,
+				855800D22A44EDAD00C32F63 /* FlowerDetector.mlmodel */,
 				858D8F1E2A0BC1E6002746D1 /* Preview Content */,
 			);
 			path = FlowerDetector;
@@ -160,23 +214,6 @@
 				858D8F352A0BC1E7002746D1 /* FlowerDetectorUITestsLaunchTests.swift */,
 			);
 			path = FlowerDetectorUITests;
-			sourceTree = "<group>";
-		};
-		85C2D5722A0D873400CA8B41 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				85C2D5742A0D878500CA8B41 /* FlowerType.swift */,
-				85C9F4692A1275A7002D6C2F /* Flowers.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		85C2D5732A0D873A00CA8B41 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				85C9F46B2A12761D002D6C2F /* LocalManager.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		85D9D9322A0C651800E4C817 /* Views */ = {
@@ -329,7 +366,9 @@
 			files = (
 				853505502A170BAF002F5F67 /* AboutView.swift in Sources */,
 				85C2D5752A0D878500CA8B41 /* FlowerType.swift in Sources */,
+				8545A0792A1CF96100C148BD /* Prediction.swift in Sources */,
 				85BCD4E42A15C7AE0050E38B /* CameraView.swift in Sources */,
+				855800D12A44ED8C00C32F63 /* FlowerDetector.mlmodel in Sources */,
 				85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */,
 				85D9D9342A0C652600E4C817 /* TabManagerView.swift in Sources */,
 				850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */,
@@ -337,7 +376,6 @@
 				858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */,
 				85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */,
 				85C9F46A2A1275A7002D6C2F /* Flowers.swift in Sources */,
-				85F6BE1C2A1672A900708B35 /* FlowerDetector.mlmodel in Sources */,
 				85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */,
 				858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */,
 				85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */,

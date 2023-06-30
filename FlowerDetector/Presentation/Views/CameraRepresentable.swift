@@ -37,6 +37,10 @@ struct CameraRepresentable: UIViewControllerRepresentable {
     func makeCoordinator() -> CameraRepresentable.Coordinator {
         return Coordinator(parent: self)
     }
+    
+    //    func navigate() -> Bool {
+    //        self.
+    //    }
 }
 
 extension CameraRepresentable {
@@ -55,8 +59,31 @@ extension CameraRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                
+                
+                
+                let alertController = UIAlertController(title: "", message: nil, preferredStyle: .alert)
+                
+                // Create an activity indicator
+                let indicator = UIActivityIndicatorView(style: .medium)
+                indicator.translatesAutoresizingMaskIntoConstraints = false
+                indicator.color = UIColor.systemGreen
+                indicator.startAnimating()
+                
+                // Add the activity indicator to the alert controller's view
+                alertController.view.addSubview(indicator)
+                
+                // Add constraints to center the activity indicator
+                indicator.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor).isActive = true
+                indicator.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor).isActive = true
+                
+                alertController.preferredContentSize = CGSize(width: alertController.preferredContentSize.width, height: 150)
+                // Present the alert controller
+                picker.present(alertController, animated: true, completion: nil)
+                
                 DispatchQueue.global().async {
                     self.parent.delegate.classifyImage(image)
+                    
                     DispatchQueue.main.async {
                         self.parent.delegate.setImage(uiImage: image)
                         self.parent.isPresented = false
@@ -66,5 +93,7 @@ extension CameraRepresentable {
                 
             }
         }
+        
+        
     }
 }

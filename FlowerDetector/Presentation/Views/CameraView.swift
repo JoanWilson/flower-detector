@@ -18,15 +18,7 @@ struct CameraView: View {
     @State var predictions: [Prediction] = []
     @State var allFlowers: [Flower] = []
     @State var showLoadingModal: Bool = false
-//    
-//    init() {
-//        let design = UIFontDescriptor.SystemDesign.serif
-//        let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle)
-//            .withDesign(design)!
-//        let font = UIFont.init(descriptor: descriptor, size: 48)
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
-//        
-//    }
+
     
     var body: some View {
         NavigationStack {
