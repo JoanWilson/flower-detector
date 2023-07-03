@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8505D25B2A525A1300A54DD4 /* LibraryRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8505D25A2A525A1300A54DD4 /* LibraryRepresentable.swift */; };
 		850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83412A0D1455007077B8 /* CameraRepresentable.swift */; };
 		850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E83452A0D347A007077B8 /* ImagePredictor.swift */; };
 		853505502A170BAF002F5F67 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8535054F2A170BAF002F5F67 /* AboutView.swift */; };
@@ -26,9 +27,6 @@
 		85C9F46E2A1277EF002D6C2F /* flowerData.json in Resources */ = {isa = PBXBuildFile; fileRef = 85C9F46D2A1277EF002D6C2F /* flowerData.json */; };
 		85D9D9342A0C652600E4C817 /* TabManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9332A0C652600E4C817 /* TabManagerView.swift */; };
 		85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9352A0C691100E4C817 /* HomeView.swift */; };
-		85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9372A0C717D00E4C817 /* IdentifierView.swift */; };
-		85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D9392A0C835100E4C817 /* CameraModel.swift */; };
-		85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */; };
 		85F6BE1A2A16667900708B35 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F6BE192A16667900708B35 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8505D25A2A525A1300A54DD4 /* LibraryRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryRepresentable.swift; sourceTree = "<group>"; };
 		850E83412A0D1455007077B8 /* CameraRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepresentable.swift; sourceTree = "<group>"; };
 		850E83432A0D15F4007077B8 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		850E83452A0D347A007077B8 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
@@ -73,9 +72,6 @@
 		85C9F46D2A1277EF002D6C2F /* flowerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flowerData.json; path = FlowerDetector/Resources/flowerData.json; sourceTree = SOURCE_ROOT; };
 		85D9D9332A0C652600E4C817 /* TabManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerView.swift; sourceTree = "<group>"; };
 		85D9D9352A0C691100E4C817 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		85D9D9372A0C717D00E4C817 /* IdentifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView.swift; sourceTree = "<group>"; };
-		85D9D9392A0C835100E4C817 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
-		85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierView2.swift; sourceTree = "<group>"; };
 		85F6BE192A16667900708B35 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,10 +217,8 @@
 			children = (
 				85D9D9332A0C652600E4C817 /* TabManagerView.swift */,
 				85D9D9352A0C691100E4C817 /* HomeView.swift */,
-				85D9D9372A0C717D00E4C817 /* IdentifierView.swift */,
-				85D9D9392A0C835100E4C817 /* CameraModel.swift */,
-				85D9D93B2A0C990D00E4C817 /* IdentifierView2.swift */,
 				850E83412A0D1455007077B8 /* CameraRepresentable.swift */,
+				8505D25A2A525A1300A54DD4 /* LibraryRepresentable.swift */,
 				850E83432A0D15F4007077B8 /* CameraView.swift */,
 				850E83452A0D347A007077B8 /* ImagePredictor.swift */,
 				85F6BE192A16667900708B35 /* DetailView.swift */,
@@ -368,17 +362,15 @@
 				85C2D5752A0D878500CA8B41 /* FlowerType.swift in Sources */,
 				8545A0792A1CF96100C148BD /* Prediction.swift in Sources */,
 				85BCD4E42A15C7AE0050E38B /* CameraView.swift in Sources */,
+				8505D25B2A525A1300A54DD4 /* LibraryRepresentable.swift in Sources */,
 				855800D12A44ED8C00C32F63 /* FlowerDetector.mlmodel in Sources */,
-				85D9D93C2A0C990D00E4C817 /* IdentifierView2.swift in Sources */,
 				85D9D9342A0C652600E4C817 /* TabManagerView.swift in Sources */,
 				850E83422A0D1455007077B8 /* CameraRepresentable.swift in Sources */,
 				850E83462A0D347B007077B8 /* ImagePredictor.swift in Sources */,
 				858D8F1B2A0BC1E5002746D1 /* ContentView.swift in Sources */,
-				85D9D9382A0C717D00E4C817 /* IdentifierView.swift in Sources */,
 				85C9F46A2A1275A7002D6C2F /* Flowers.swift in Sources */,
 				85D9D9362A0C691100E4C817 /* HomeView.swift in Sources */,
 				858D8F192A0BC1E5002746D1 /* FlowerDetectorApp.swift in Sources */,
-				85D9D93A2A0C835100E4C817 /* CameraModel.swift in Sources */,
 				85F6BE1A2A16667900708B35 /* DetailView.swift in Sources */,
 				85C9F46C2A12761D002D6C2F /* LocalManager.swift in Sources */,
 			);
@@ -543,7 +535,7 @@
 				DEVELOPMENT_TEAM = F2MBMJ3PK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "PLESE ALLOW IT";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permita para a captura das fotos";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow it too";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -576,7 +568,7 @@
 				DEVELOPMENT_TEAM = F2MBMJ3PK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "PLESE ALLOW IT";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permita para a captura das fotos";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow it too";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

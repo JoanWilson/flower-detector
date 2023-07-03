@@ -9,8 +9,6 @@ import Vision
 import UIKit
 import ImageIO
 
-
-
 class ImagePredictor {
     typealias ImagePredictionHandler = (_ predictions: [Prediction]?) -> Void
     

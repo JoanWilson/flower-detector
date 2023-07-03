@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CameraView: View {
     @State var showCamera: Bool = false
-    @State var showDetail: Bool = false
+    @State var showLibrary: Bool = false
     @State var image: UIImage? = nil
     let predictionsToShow = 4
     private let classifier = ImagePredictor()
@@ -165,13 +165,15 @@ struct CameraView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        
+                        showLibrary.toggle()
                     } label: {
                         Image(systemName: "photo.circle.fill")
                             .resizable()
                             .frame(width: 35, height: 35)
                             .tint(.green)
-                    }.disabled(true)
+                    }.sheet(isPresented: $showLibrary) {
+                        LibraryRepresentable(isPresented: $showLibrary, delegateToSelectView: self)
+                    }
                 }
             }
             .onAppear {

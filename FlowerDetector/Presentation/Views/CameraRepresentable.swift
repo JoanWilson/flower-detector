@@ -37,10 +37,6 @@ struct CameraRepresentable: UIViewControllerRepresentable {
     func makeCoordinator() -> CameraRepresentable.Coordinator {
         return Coordinator(parent: self)
     }
-    
-    //    func navigate() -> Bool {
-    //        self.
-    //    }
 }
 
 extension CameraRepresentable {
