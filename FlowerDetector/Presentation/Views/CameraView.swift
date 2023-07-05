@@ -42,10 +42,9 @@ struct CameraView: View {
                             .cornerRadius(10)
                             .clipped()
                     } else {
-                        
                         Button {
                             showCamera.toggle()
-                            showLoadingModal.toggle()
+                            showLoadingModal = true
                         } label: {
                             HStack {
                                 VStack {
@@ -119,17 +118,10 @@ struct CameraView: View {
                                                     
                                                 }
                                             }.background(Color(UIColor.systemGray6))
-                                            
-                                            
-                                            
                                         }
                                         .padding(.horizontal)
                                         .buttonStyle(.plain)
-                                        
-                                        
                                     }
-                                    
-                                    
                                     Divider()
                                 }
                             }
@@ -183,8 +175,6 @@ struct CameraView: View {
                 }
                 self.allFlowers = flowersWrapped.flowers
             }
-            
-            
         }
     }
 }
@@ -194,7 +184,7 @@ struct CameraView: View {
 extension CameraView: CameraRepresentableDelegate {
     
     func modalLoadingToggle() {
-        self.showLoadingModal.toggle()
+        self.showLoadingModal = false
     }
     
     func getFlowerWithPredictionName(_ prediction: String) -> Flower {
@@ -247,8 +237,6 @@ extension CameraView: CameraRepresentableDelegate {
         }
         
         let formattedPredictions = formatPredictions(predictions)
-        
-        //        let predictionString = formattedPredictions.joined(separator: "\n")
         
         var count = 1
         for prediction in predictions {

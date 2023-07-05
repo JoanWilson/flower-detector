@@ -55,11 +55,7 @@ extension CameraRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                
-                
-                
                 let alertController = UIAlertController(title: "", message: nil, preferredStyle: .alert)
-                
                 // Create an activity indicator
                 let indicator = UIActivityIndicatorView(style: .medium)
                 indicator.translatesAutoresizingMaskIntoConstraints = false
@@ -89,7 +85,5 @@ extension CameraRepresentable {
                 
             }
         }
-        
-        
     }
 }

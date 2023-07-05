@@ -57,32 +57,38 @@ struct LibraryRepresentable: UIViewControllerRepresentable {
                             }
                         }
                     } else {
-                        print("Could not load the Image")
+                        self.showErrorAlert(message: "Falha ao carregar imagem, por favor tente novamente.", picker: picker)
                     }
-                    
-//                    let alertController = UIAlertController(title: "", message: nil, preferredStyle: .alert)
-//
-//                    // Create an activity indicator
-//                    let indicator = UIActivityIndicatorView(style: .medium)
-//                    indicator.translatesAutoresizingMaskIntoConstraints = false
-//                    indicator.color = UIColor.systemGreen
-//                    indicator.startAnimating()
-//
-//                    // Add the activity indicator to the alert controller's view
-//                    alertController.view.addSubview(indicator)
-//
-//                    // Add constraints to center the activity indicator
-//                    indicator.centerXAnchor.constraint(equalTo: alertController.view.centerXAnchor).isActive = true
-//                    indicator.centerYAnchor.constraint(equalTo: alertController.view.centerYAnchor).isActive = true
-//
-//                    alertController.preferredContentSize = CGSize(width: alertController.preferredContentSize.width, height: 150)
-//                    // Present the alert controller
-//                    picker.present(alertController, animated: true, completion: nil)
-                    
-                    
                 }
-                
+            } else if provider.hasItemConformingToTypeIdentifier(UTType.webP.identifier) {
+                provider.loadDataRepresentation(forTypeIdentifier: UTType.webP.identifier) {data, err in
+                    if let data = data,
+                       let image = UIImage.init(data: data) {
+                        DispatchQueue.global().async {
+                            self.parent.delegateToSelectView.classifyImage(image)
+                            
+                            DispatchQueue.main.async {
+                                self.parent.delegateToSelectView.setImage(uiImage: image)
+                                self.parent.isPresented = false
+                                print("Carregou")
+                            }
+                        }
+                    } else {
+                        self.showErrorAlert(message: "Falha ao carregar imagem, por favor tente novamente.", picker: picker)
+                    }
+                }
+            } else {
+                self.showErrorAlert(message: "Falha ao carregar imagem, por favor tente novamente.", picker: picker)
             }
+        }
+        
+        func showErrorAlert(message: String, picker: PHPickerViewController) {
+            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okayAction)
+            
+            picker.present(alertController, animated: true, completion: nil)
+           
         }
     }
 }
