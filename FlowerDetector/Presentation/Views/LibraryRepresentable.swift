@@ -42,6 +42,7 @@ struct LibraryRepresentable: UIViewControllerRepresentable {
         }
         
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            picker.dismiss(animated: true)
             guard let provider = results.first?.itemProvider else { return }
             
             if provider.canLoadObject(ofClass: UIImage.self) {
@@ -82,13 +83,15 @@ struct LibraryRepresentable: UIViewControllerRepresentable {
             }
         }
         
+        
+        
         func showErrorAlert(message: String, picker: PHPickerViewController) {
             let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okayAction)
             
             picker.present(alertController, animated: true, completion: nil)
-           
+            
         }
     }
 }
