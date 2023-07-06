@@ -308,11 +308,12 @@
 			};
 			buildConfigurationList = 858D8F102A0BC1E5002746D1 /* Build configuration list for PBXProject "FlowerDetector" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"pt-BR",
+				"pt-PT",
 			);
 			mainGroup = 858D8F0C2A0BC1E5002746D1;
 			productRefGroup = 858D8F162A0BC1E5002746D1 /* Products */;
